@@ -1,0 +1,92 @@
+---
+layout: post
+title:  "Routine Daily/weekly/monthly"
+date:   2015-08-01 13:00:00
+categories: linux training
+---
+* toc
+{:toc}
+
+#Linux
+
+##Launch Docker VM
+
+~~~ bash
+docker run -it --rm ubuntu:latest /bin/bash
+~~~
+
+##Record commands and check term capabilities
+
+~~~ bash
+script
+
+file `which diff`
+tput colors
+echo $TERM
+export TERM=xterm-256color
+exit #script
+cat typescript
+~~~
+
+##Manage users and group
+
+~~~ bash
+tail /etc/passwd
+useradd -D #lowlevel
+useradd bi
+#adduser bi
+mkdir -p /home/bi
+chown bi:bi /home/bi
+passwd bi
+groupadd mkt
+usermod -a -G mkt bi
+usermod -g mkt bi
+usermod -g bi bi
+id bi
+su - bi
+
+touch s.sh
+chmod 0766 s.sh
+
+exit
+
+usermod --shell /bin/false bi
+usermod --shell /bin/bash bi
+
+#userdel -r bi
+~~~
+
+##Bash function
+
+~~~ bash
+bind -p
+~~~
+
+##Scripting
+
+~~~ bash
+[ ! "abc" = "def" ]; echo $?
+test "abc" \< "abc" ; echo $?
+# ( cmd ) is run in a sub-shell, so we escape it
+[ ! \( "a" = "$HOME" -o 3 -lt 4 \) ]; echo ?
+~~~
+
+~~~ bash
+function err() {
+    echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $@" >&2
+}
+function test() {
+    local var1="var1"
+    local var2
+    var2="var2"
+    err var1 ${var1} var2 ${var2} $1
+}
+
+test "just a param"
+#return a string
+fct1(){
+    echo "return1 $1"
+}
+val1 = `fct1 param`
+err ${val1} $?
+~~~

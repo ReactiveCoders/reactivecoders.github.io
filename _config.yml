@@ -1,0 +1,11 @@
+# Site settings
+title: Reactive Coders
+email: info@reactivecoders.org
+description: > # this means to ignore newlines until "baseurl:"
+    Reactive Coders
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://reactivecoders.github.io" # the base hostname & protocol for your site
+github_username:  ReactiveCoders
+
+# Build settings
+markdown: kramdown
