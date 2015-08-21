@@ -4,7 +4,8 @@ email: info@reactivecoders.org
 description: > # this means to ignore newlines until "baseurl:"
     Reactive Coders
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://reactivecoders.github.io" # the base hostname & protocol for your site
+url: "http://reactivecoders.org" # the base hostname & protocol for your site
+twitter_username: ReactiveCoders
 github_username:  ReactiveCoders
 
 # Build settings
