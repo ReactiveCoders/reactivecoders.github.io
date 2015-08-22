@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Biz Kimiz
+title: Biz Kimiz?
 permalink: /biz-kimiz/
 ---
 
